@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- Consider collapsable text section:
+https://www.w3schools.com/howto/howto_js_collapsible.asp
+-->
+
+    <article class="article">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <h3>How-to</h3>
+                <p>
+Upload an article through a text file or by pasting the content in the text box. The first option of either form limits
+the number of sentences within the summary. The second option specifies a percentage by which to reduce the article.
+When reducing the article size through the second option, the amount removed is approximate. In other words, the
+application will make attempts at reducing the article size by the specified value.
+                </p>
+                <h3>Limitations</h3>
+                <p>
+                    <ul>
+                        <li>The application was built from libraries and tools pre installed in the CS50 IDE, therefore it is limited to using only these assets.</li>
+                        <li>UTF-8 is a very common standard for online web pages, yet interestingly enough I've found a few article with characters and symbols outside of this standard.</li>
+                        <li>The application can only construct summaries by reusing sentences from the article.</li>
+                        <li>The application is inconsistent in determining a sentence or paragraph.</li>
+                        <li>Can’t paste url to scrap article</li>
+                        <li>The application is unable to determine the underlying subject of an article, and thus unable construct a more dynamic summary.</li>
+                        <li>Shrinking the browser window distorts the webpage.</li>
+                        <li>Using a screen aspect ratio other than 16:10 can potentially cut off content.</li>
+                        <li>Built and tested on Chrome, serviceable apearance on other web browsers is unknown.</li>
+                    </ul>
+                </p>
+                <h3>Improvements</h3>
+                <p>
+                    <ul>
+                        <li>Expand utf decoding.</li>
+                        <li>Include search by url and html scraping.</li>
+                        <li>Improve compatibility with different monitor setups and web browsers.</li>
+                        <li>When the specified summary size permits, parse the summary into paragraphs.</li>
+                        <li>An improved set of rules could improve summary construction to be more succinct and comprehensive.</li>
+                        <li>Robusts statistical approaches could improve the selection of sentences, and even subjects.</li>
+                        <li>Machine learning could improve overall functionality by piggybacking off of statistical data.</li>
+                        <li>Leverage libraries and open source code from github.</li>
+                    </ul>
+                </p>
+                <h3>Thoughts for the future</h3>
+                <p>
+This application would ideally become part of a larger tool that would aggregate articles of similar subjects and display comparisons between them,
+while also providing summaries of the common points that are shared amongst articles.
+The tool would not be a replacement for reading the articles themselves since the summaries would be lacking in detail and context.
+In this day and age it is easy for the reader to become saturated with the abundance of information.
+Therefore a tool which is capable of condensing quantitative bits of information, sieved from the opinions of writers, would, I belive, be of a nontrivial benefit to people.
+
+                </p>
+                <p>
+This would at the very least make evident the differences between sources and their respective facts and opinions.
+Furthermore, a tool such as this would need to be open source as to prevent or eliminate any conscious or unconscious bias within the software itself.
+This kind of tool would likely have to be locally installed by the user as either an extension or a standalone program since the tool would be storing content from publishers.
+The content would be used for side by side comparisons and referenced for later use. It would be a major plus if the tool were able to discern external references and also be capable of searching for them.
+Then again, who uses references anymore, amirite?
+                </p>
+            </div>
+        </div>
+    </article>
+
+{% endblock %}

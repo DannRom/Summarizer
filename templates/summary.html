@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col">
+            <p class="stats">
+                Article length: {{ result.art_len }} &nbsp &nbsp &nbsp &nbsp
+                Summary length: {{ result.sum_len }} &nbsp &nbsp &nbsp &nbsp
+                Size reduction: {{ result.reduction }} &nbsp &nbsp &nbsp &nbsp
+                Operation time: {{ result.time }}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <!--lefthand column-->
+        <div class="col-6">
+            <h1>Summary</h1>
+        </div>
+
+        <!--righthand column-->
+        <div class="col-6">
+            <h1>Article</h1>
+        </div>
+    </div>
+    <div class="row">
+        <!--lefthand column-->
+        <div class="col-6" id="left">
+            <pre>{{ result.summary | safe }}</pre>
+        </div>
+
+        <!--righthand column-->
+        <div class="col-6" id="right">
+            <pre>{{ article | safe }}</pre>
+        </div>
+    </div>
+
+{% endblock %}

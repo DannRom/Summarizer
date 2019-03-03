@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <p class="welcome">
+                Welcome, this page will allow you to summarize an article compatible with UTF-8. Select one of the forms
+                below to upload an article, and submit through either of the two options.
+            </p>
+            <br>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <form action="/file_summary" enctype="multipart/form-data" method="post">
+
+                    <label class="h5" for="file">Select a text file to summarize</label><br>
+                    <strong>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</strong>
+                    <input type="file" name="file">
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <p style="text-align:left;">
+                                Limit summary to <input type="text" name="limit" value="20"> sentences.
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" name="sumLimit" class="btn btn-light btn-sm" value="Submit">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <!--This line displays the slider percentages; it's tied to an onload function in the body layout-->
+                            <p style="text-align:left;">Reduce article size by:
+                                <span
+                                    id="fileInitial" style="color:#FA8072;"></span><span
+                                    id="fileTarget" style="color:#FA8072;"></span><span style="color:#FA8072;">%
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" name="sumTarget" class="btn btn-light btn-sm" value="Submit">
+                        </div>
+                    </div>
+                    <div class="slidecontainer">
+                        <div class="row">
+                            <div class="col">
+                                <input type="range" name="target" min="1" value="80" max="90" class="slider" id="fileRange">
+                            </div>
+                        </div>
+                    </div>
+
+                </form action>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <form action="/text_summary" method="post">
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="h5" for="writtenText">Paste text below to summarize</label>
+                            <textarea name="text" class="form-control" rows="10" placeholder="Text..."></textarea><br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <p style="text-align:left;">
+                                Limit summary to <input type="text" name="limit" value="20"> sentences.
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" name="sumLimit" class="btn btn-light btn-sm" value="Submit">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <!--This line displays the slider percentages; it's tied to an onload function in the body layout-->
+                            <p style="text-align:left;">Reduce article size by:
+                                <span
+                                    id="textInitial" style="color:#FA8072;"></span><span
+                                    id="textTarget" style="color:#FA8072;"></span><span style="color:#FA8072;">%
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" name="sumTarget" class="btn btn-light btn-sm" value="Submit">
+                        </div>
+                    </div>
+                    <div class="slidecontainer">
+                        <div class="row">
+                            <div class="col">
+                                <input type="range" name="target" min="1" max="90" value="80" class="slider" id="textRange">
+                            </div>
+                        </div>
+                    </div>
+
+                </form action>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

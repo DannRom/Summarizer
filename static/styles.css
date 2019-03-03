@@ -1,0 +1,156 @@
+
+.navbar-default {
+    background-color: #FA8072;
+    border-color: #000000;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #484d53;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #484d53;
+}
+
+/* fill viewport, hide scroll bar */
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color:#343a40;
+}
+
+/* fill viewport & ensure content is below navbar */
+.container-fluid {
+    padding-top: 71px;
+    height: 100%;
+}
+
+.welcome {
+    text-align: center;
+}
+
+form {
+    padding: 15px;
+    background-color:#484d53;
+    color: #fff;
+    text-align: center;
+}
+
+/* Slider apearance */
+/* https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background: #d3d3d3;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FA8072;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FA8072;
+    cursor: pointer;
+}
+
+.stats {
+    color: #fff;
+    text-align: right;
+}
+
+input[type=text] {
+    height: 22px;
+    width: 25px;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    color:#fff;
+}
+
+hr {
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+    color: #888;
+}
+
+pre {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: pre-wrap;
+    color: #fff;
+}
+
+/* aligns summary column width-6 to the left */
+#left {
+    text-align: justify;
+    height: 82%;
+    position: absolute;
+    padding: 0;
+    left: 0;
+}
+
+/* aligns article column width-6 to the right */
+#right {
+    text-align: justify;
+    height: 82%;
+    position: absolute;
+    padding: 0;
+    right: 0;
+}
+
+/* Change scrollbar appearance */
+/* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FA8072;
+    border-radius: 5px;
+}
+
+/* Styling for about.html */
+.article {
+    color: #fff;
+    position:absolute;
+    top: 80px;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.article p {
+    text-align: justify;
+}
