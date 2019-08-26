@@ -1,5 +1,5 @@
 # Summariser
-Summarises article text.
+Summarises article text. The user is able to copy and paste text into a text box, or upload the desired text to be summarized. The able to select the desired summary length and submit the article text. The ouput is a summary of the article composed of the most similar sentences within the article text.
 
 ### Improvements/Lessons to take for next project.
 1. Rewrite source code to follow [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).
