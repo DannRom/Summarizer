@@ -1,12 +1,15 @@
 
 .navbar-default {
-    background-color: #FA8072;
+    background-color: #00b3a4;
     border-color: #000000;
 }
 
 .navbar-default .navbar-brand {
     color: #fff;
+    font-size: 200%;
     font-weight: bold;
+    font-style: italic;
+    font-family: Arvo;
 }
 
 .nav-link {
@@ -19,15 +22,31 @@
 }
 
 /* fill viewport, hide scroll bar */
-html, body {
+.hidden_scroll {
     height: 100%;
     overflow: hidden;
     background-color:#343a40;
 }
 
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    background-color:#343a40;
+}
+
 /* fill viewport & ensure content is below navbar */
 .container-fluid {
-    padding-top: 71px;
+    top: 72px;
+    bottom: 0px;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.container-summary {
+    padding-top: 72px;
     height: 100%;
 }
 
@@ -59,7 +78,7 @@ form {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #FA8072;
+    background: #00b3a4;
     cursor: pointer;
 }
 
@@ -67,13 +86,15 @@ form {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #FA8072;
+    background: #00b3a4;
     cursor: pointer;
 }
 
 .stats {
     color: #fff;
     text-align: right;
+    padding-top: 1rem;
+    padding-right: 1rem;
 }
 
 input[type=text] {
@@ -82,6 +103,10 @@ input[type=text] {
 }
 
 h1 {
+    color: #fff;
+}
+
+h5 {
     color: #fff;
 }
 
@@ -104,10 +129,18 @@ pre {
     color: #fff;
 }
 
+li a {
+    color: #fff;
+}
+
+small {
+    color: #fff;
+}
+
 /* aligns summary column width-6 to the left */
 #left {
     text-align: justify;
-    height: 82%;
+    height: 80%;
     position: absolute;
     padding: 0;
     left: 0;
@@ -116,7 +149,7 @@ pre {
 /* aligns article column width-6 to the right */
 #right {
     text-align: justify;
-    height: 82%;
+    height: 80%;
     position: absolute;
     padding: 0;
     right: 0;
@@ -137,18 +170,14 @@ pre {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #FA8072;
+    background: #00b3a4;
     border-radius: 5px;
 }
 
 /* Styling for about.html */
 .article {
     color: #fff;
-    position:absolute;
     top: 80px;
-    bottom: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 .article p {

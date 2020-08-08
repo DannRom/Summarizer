@@ -4,7 +4,7 @@ from nltk.stem.porter import PorterStemmer
 from time import perf_counter
 import re
 
-##### Base Function #####
+# Base Function
 def process_article(article):
 
     """
@@ -26,22 +26,17 @@ def process_article(article):
     which contain a list of words from each sentence
     with stop words ommited
     """
-    # set() time is O(1) while list time is O(n):
-    # https://wiki.python.org/moin/TimeComplexity
-    stop_words = set(["a", "about", "above", "after", "again", "against", "all", "am", "an", "and",
-                "any", "are", "as", "at", "be", "because", "been", "before", "being", "below",
-                "between", "both", "but", "by", "could", "did", "do", "does", "doing", "down",
-                "during", "each", "few", "for", "from", "further", "had", "has", "have", "having",
-                "he", "her", "here", "hers", "herself", "him","himself", "his", "how", "i", "i'm",
-                "if", "in", "into", "is", "it", "its", "itself", "me", "more", "most", "my", "myself",
-                "nor", "of", "on", "once", "only", "or", "other", "ought", "our", "ours", "ourselves",
-                "out", "over", "own", "s", "same", "she", "should", "so", "some", "such", "t", "than",
-                "that", "the", "their", "theirs", "them", "themselves", "then", "there", "these",
-                "they", "this", "those", "through", "to", "too", "under", "until", "up", "very",
-                "was", "we", "were", "what", "when", "where", "which", "while", "who", "whom", "why",
-                "with", "would", "you", "your", "yours", "yourself", "yourselves", ";", ":", ",", "'",
-                "’", '’', '"', '“', '”', ".", "...", "?", "!", "-", "(", ")", "'d", "'re", "'s", "'ll",
-                "'ve", "n't", "'m"])
+    stop_words = {"a", "about", "above", "after", "again", "against", "all", "am", "an", "and", "any", "are", "as",
+                  "at", "be", "because", "been", "before", "being", "below", "between", "both", "but", "by", "could",
+                  "did", "do", "does", "doing", "down", "during", "each", "few", "for", "from", "further", "had", "has",
+                  "have", "having", "he", "her", "here", "hers", "herself", "him", "himself", "his", "how", "i", "i'm",
+                  "if", "in", "into", "is", "it", "its", "itself", "me", "more", "most", "my", "myself", "nor", "of",
+                  "on", "once", "only", "or", "other", "ought", "our", "ours", "ourselves", "out", "over", "own", "s",
+                  "same", "she", "should", "so", "some", "such", "t", "than", "that", "the", "their", "theirs", "them",
+                  "themselves", "then", "there", "these", "they", "this", "those", "through", "to", "too", "under",
+                  "until", "up", "very", "was", "we", "were", "what", "when", "where", "which", "while", "who", "whom",
+                  "why", "with", "would", "you", "your", "yours", "yourself", "yourselves", ";", ":", ",", "'", "’",
+                  '’', '"', '“', '”', ".", "...", "?", "!", "-", "(", ")", "'d", "'re", "'s", "'ll", "'ve", "n't", "'m"}
 
     index = []
     for s in range(len(body)):
@@ -85,7 +80,7 @@ def process_article(article):
 
     """
     Remove duplicate sentences and their respective score,
-    leaving only the the first occurance of that sentence.
+    leaving only the the first occurrence of that sentence.
     """
     content = body.copy()
     for x in reversed(range(len(total))):

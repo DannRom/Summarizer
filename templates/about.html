@@ -4,7 +4,7 @@
 <!-- Consider collapsable text section:
 https://www.w3schools.com/howto/howto_js_collapsible.asp
 -->
-
+    <br>
     <article class="article">
         <div class="row justify-content-center">
             <div class="col-5">
@@ -26,20 +26,17 @@ application will make attempts at reducing the article size by the specified val
                         <li>The application is unable to determine the underlying subject of an article, and thus unable construct a more dynamic summary.</li>
                         <li>Shrinking the browser window distorts the webpage.</li>
                         <li>Using a screen aspect ratio other than 16:10 can potentially cut off content.</li>
-                        <li>Built and tested on Chrome, serviceable apearance on other web browsers is unknown.</li>
                     </ul>
                 </p>
                 <h3>Improvements</h3>
                 <p>
                     <ul>
-                        <li>Expand utf decoding.</li>
                         <li>Include search by url and html scraping.</li>
                         <li>Improve compatibility with different monitor setups and web browsers.</li>
                         <li>When the specified summary size permits, parse the summary into paragraphs.</li>
                         <li>An improved set of rules could improve summary construction to be more succinct and comprehensive.</li>
-                        <li>Robusts statistical approaches could improve the selection of sentences, and even subjects.</li>
-                        <li>Machine learning could improve overall functionality by piggybacking off of statistical data.</li>
-                        <li>Leverage libraries and open source code from github.</li>
+                        <li>Robust statistical approaches could improve the selection of sentences, and even subjects.</li>
+                        <li>Machine learning could potentially improve the accuracy of summaries. Though, this may introduce bias if done incorrectly.</li>
                     </ul>
                 </p>
                 <h3>Thoughts for the future</h3>
@@ -47,19 +44,48 @@ application will make attempts at reducing the article size by the specified val
 This application would ideally become part of a larger tool that would aggregate articles of similar subjects and display comparisons between them,
 while also providing summaries of the common points that are shared amongst articles.
 The tool would not be a replacement for reading the articles themselves since the summaries would be lacking in detail and context.
-In this day and age it is easy for the reader to become saturated with the abundance of information.
-Therefore a tool which is capable of condensing quantitative bits of information, sieved from the opinions of writers, would, I belive, be of a nontrivial benefit to people.
-
-                </p>
-                <p>
-This would at the very least make evident the differences between sources and their respective facts and opinions.
-Furthermore, a tool such as this would need to be open source as to prevent or eliminate any conscious or unconscious bias within the software itself.
-This kind of tool would likely have to be locally installed by the user as either an extension or a standalone program since the tool would be storing content from publishers.
-The content would be used for side by side comparisons and referenced for later use. It would be a major plus if the tool were able to discern external references and also be capable of searching for them.
-Then again, who uses references anymore, amirite?
+It's easy for readers to become overwhelmed by the abundance of information, perhaps a tool like this could be useful.
                 </p>
             </div>
         </div>
     </article>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3  ">Dr. Lee's Class 2020 ©</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Cool stuff</a></li>
+          <li><a href="#">Random feature</a></li>
+          <li><a href="#">Team feature</a></li>
+          <li><a href="#">Stuff for developers</a></li>
+          <li><a href="#">Another one</a></li>
+          <li><a href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Resource name</a></li>
+          <li><a href="#">Another resource</a></li>
+          <li><a href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
 
 {% endblock %}

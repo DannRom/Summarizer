@@ -2,7 +2,7 @@
 <!-- The above states that the webpage is written in html 5 -->
 <!-- Content within curly braces are Jinja parameters -->
 <!-- The following code implements Bootstrap's starter template -->
-<html lang="en">
+<html lang="en" class="hidden_scroll">
     <head>
 
         <!-- Required meta tags -->
@@ -18,9 +18,6 @@
 
     </head>
     <body onload="fileOnload()">
-        <header>
-            head
-        </header>
 
         <nav class="navbar fixed-top navbar-default bg-default">
             <a class="navbar-brand" href="/">Summarizer</a>
@@ -29,7 +26,7 @@
             </ul>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container-summary">
             {% block body %}{% endblock %}
         </div>
 

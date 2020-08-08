@@ -68,10 +68,10 @@ def text_summary():
 
     # Circumvents bug [1]
     content = request.form.get("text")
-    f = open("summary.txt","w+")
+    f = open("summary.txt","w+", encoding="utf-8")
     f.write(content)
     f.close()
-    f = open("summary.txt", "r")
+    f = open("summary.txt", "r", encoding="utf-8")
     article = f.read()
     f.close()
     if os.path.isfile("summary.txt"):

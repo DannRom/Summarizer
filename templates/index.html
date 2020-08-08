@@ -2,12 +2,13 @@
 
 {% block body %}
 
-    <br>
+<main>
+        <br>
     <div class="row justify-content-center">
         <div class="col-5">
             <p class="welcome">
-                Welcome, this page will allow you to summarize an article compatible with UTF-8. Select one of the forms
-                below to upload an article, and submit through either of the two options.
+                Welcome, this page will allow you to summarize any article. Select one of the forms
+                below to upload an article, and submit through either of the two boxed options.
             </p>
             <br>
         </div>
@@ -41,8 +42,8 @@
                             <!--This line displays the slider percentages; it's tied to an onload function in the body layout-->
                             <p style="text-align:left;">Reduce article size by:
                                 <span
-                                    id="fileInitial" style="color:#FA8072;"></span><span
-                                    id="fileTarget" style="color:#FA8072;"></span><span style="color:#FA8072;">%
+                                    id="fileInitial" style="color:#00b3a4;"></span><span
+                                    id="fileTarget" style="color:#00b3a4;"></span><span style="color:#00b3a4;">%
                                 </span>
                             </p>
                         </div>
@@ -92,8 +93,8 @@
                             <!--This line displays the slider percentages; it's tied to an onload function in the body layout-->
                             <p style="text-align:left;">Reduce article size by:
                                 <span
-                                    id="textInitial" style="color:#FA8072;"></span><span
-                                    id="textTarget" style="color:#FA8072;"></span><span style="color:#FA8072;">%
+                                    id="textInitial" style="color:#00b3a4;"></span><span
+                                    id="textTarget" style="color:#00b3a4;"></span><span style="color:#00b3a4;">%
                                 </span>
                             </p>
                         </div>
@@ -114,5 +115,44 @@
             </div>
         </div>
     </div>
+</main>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3  ">Dr. Lee's Class 2020 ©</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Cool stuff</a></li>
+          <li><a href="#">Random feature</a></li>
+          <li><a href="#">Team feature</a></li>
+          <li><a href="#">Stuff for developers</a></li>
+          <li><a href="#">Another one</a></li>
+          <li><a href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Resource name</a></li>
+          <li><a href="#">Another resource</a></li>
+          <li><a href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
 
 {% endblock %}
